@@ -1,0 +1,16 @@
+.dropdown{
+    cursor: pointer;
+}
+
+.navbar-brand{
+    padding-left: 15px;
+    margin-right: 0px;
+}
+
+.navbar-collapse{
+    padding-left: 10px;
+}
+
+.nav-item{
+    padding-left: 15px;
+}
