@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { AngularFireDatabase, AngularFireObject } from "@angular/fire/database";
+import { AngularFireDatabase } from "@angular/fire/database";
 import { Product } from "./models/product";
 import { take } from "rxjs/operators";
 import { Observable } from "rxjs";
@@ -62,11 +62,15 @@ export class ShoppingCartService {
           let quantity = item.quantity - 1;
           if (quantity === 0) {
             item$.remove();
-            this.getCart().then(data => data.pipe(take(1)).subscribe(cart => {
-              if (cart.totalItemsCount === 0) {
-                this.db.object("/shopping-carts/" + cartId + "/items/").set(0);
-              }
-            }));
+            this.getCart().then((data) =>
+              data.pipe(take(1)).subscribe((cart) => {
+                if (cart.totalItemsCount === 0) {
+                  this.db
+                    .object("/shopping-carts/" + cartId + "/items/")
+                    .set(0);
+                }
+              })
+            );
           } else item$.update({ quantity: quantity });
         }
       });

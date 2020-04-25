@@ -1,1 +1,75 @@
-<p>check-out works!</p>
+<h2>Shipping Information</h2>
+<div class="row">
+  <div class="col-7" id="col">
+    <form #f="ngForm" (ngSubmit)="placeOrder()">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input 
+          class="form-control"
+          [(ngModel)]="shipping.name"
+          #name="ngModel"
+          name="name"
+          required
+        />
+        <div class="alert alert-danger" *ngIf="name.touched && name.invalid">
+          <div *ngIf="name.errors.required">Name is required.</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="addressLine1">Address</label>
+        <input
+          class="form-control"
+          placeholder="Line 1"
+          [(ngModel)]="shipping.addressLine1"
+          #addressLine1="ngModel"
+          name="addressLine1"
+          required
+        />
+        <div
+          class="alert alert-danger"
+          *ngIf="addressLine1.touched && addressLine1.invalid"
+        >
+          <div *ngIf="addressLine1.errors.required">
+            Address Line 1 is required.
+          </div>
+        </div>
+        <br />
+        <input
+          class="form-control"
+          placeholder="Line 2"
+          [(ngModel)]="shipping.addressLine2"
+          #addressLine2="ngModel"
+          name="addressLine2"
+          required
+        />
+        <div
+          class="alert alert-danger"
+          *ngIf="addressLine2.touched && addressLine2.invalid"
+        >
+          <div *ngIf="addressLine2.errors.required">
+            Address Line 2 is required.
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="name">City</label>
+        <input
+          class="form-control"
+          [(ngModel)]="shipping.city"
+          #city="ngModel"
+          name="city"
+          required
+        />
+        <div class="alert alert-danger" *ngIf="city.touched && city.invalid">
+          <div *ngIf="city.errors.required">City is required.</div>
+        </div>
+      </div>
+      <button class="btn btn-primary" [disabled]="f.invalid">
+        Place Order
+      </button>
+    </form>
+  </div>
+  <div class="col-5" id="col">
+    <shopping-cart-summary [cart]="cart"></shopping-cart-summary>
+  </div>
+</div>
