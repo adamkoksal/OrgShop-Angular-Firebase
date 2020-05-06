@@ -1,6 +1,18 @@
 # OrgShop
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.22.
+• This is Organic Products Web Application was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.22.
+
+# Users can;
+
+• Login with their Google Accounts.
+
+• Add products to the shopping cart.
+
+# Managers can;
+
+• Edit product listings.
+
+• View orders.
 
 ## Development server
 
