@@ -1,4 +1,5 @@
 # OrgShop
+https://org-shop-app.firebaseapp.com/
 
 • This is Organic Products Web Application was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.22.
 
