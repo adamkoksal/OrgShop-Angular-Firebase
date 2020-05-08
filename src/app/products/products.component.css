@@ -1,15 +1,32 @@
-.col-3{
-    margin-top: 20px;
-    margin-left: 0px;
+.b {
+  margin: 20px;
+  margin-left: 45px;
+  margin-right: 45px;
 }
 
-.b{
-    margin: 20px;
-    margin-left: 45px;
-    margin-right: 45px;
+.z {
+    display: grid;
+    gap: 5vh;
+    grid-template-columns: 1fr 3fr;
 }
 
-.a{
-    position:fixed;
+.a {
+  position: fixed;
+  margin-top: 20px;
+  margin-left: 0px;
 }
 
+@media screen and (max-width: 850px) {
+  .row {
+    grid-template-columns: 1fr;
+}
+
+.y {
+    margin: 0px 12vw;
+}
+
+.a {
+    margin: 0 5vw;
+    position: relative;
+  }
+}

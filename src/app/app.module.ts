@@ -11,7 +11,6 @@ import { AngularFirestore } from "@angular/fire/firestore";
 import { AppComponent } from "./app.component";
 import { BsNavbarComponent } from "./bs-navbar/bs-navbar.component";
 import { CheckOutComponent } from "./check-out/check-out.component";
-import { HomeComponent } from "./home/home.component";
 import { MyOrdersComponent } from "./my-orders/my-orders.component";
 import { OrderSuccessComponent } from "./order-success/order-success.component";
 import { ProductsComponent } from "./products/products.component";
@@ -42,7 +41,6 @@ import { ShoppingCartSummaryComponent } from "./shopping-cart-summary/shopping-c
     AppComponent,
     BsNavbarComponent,
     CheckOutComponent,
-    HomeComponent,
     MyOrdersComponent,
     OrderSuccessComponent,
     ProductsComponent,

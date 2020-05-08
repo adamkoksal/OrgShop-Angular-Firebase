@@ -5,14 +5,14 @@ export class ShoppingCart {
   public items: ShoppingCartItem[] = [];
 
   constructor(private itemsMap: { [productId: string]: ShoppingCartItem }) {
-    // tslint:disable-next-line: forin
     for (let productId in itemsMap) {
       let item = itemsMap[productId];
       this.items.push(new ShoppingCartItem(item.product, item.quantity));
     }
   }
 
-  getQuantity(product: Product) {
+  public getQuantity(product: Product) {
+    if (this.itemsMap === undefined) return 0;
     let item = this.itemsMap[product.key];
     return item ? item.quantity : 0;
   }
