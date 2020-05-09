@@ -1,10 +1,13 @@
-<h2>Shipping Information</h2>
-<div class="row">
-  <div class="col-7" id="col">
+<div class="row z">
+  <div class="x">
+    <shopping-cart-summary [cart]="cart"></shopping-cart-summary>
+  </div>
+  <div class="y">
+    <h2>Shipping Information</h2>
     <form #f="ngForm" (ngSubmit)="placeOrder()">
       <div class="form-group">
         <label for="name">Name</label>
-        <input 
+        <input
           class="form-control"
           [(ngModel)]="shipping.name"
           #name="ngModel"
@@ -68,8 +71,5 @@
         Place Order
       </button>
     </form>
-  </div>
-  <div class="col-5" id="col">
-    <shopping-cart-summary [cart]="cart"></shopping-cart-summary>
   </div>
 </div>

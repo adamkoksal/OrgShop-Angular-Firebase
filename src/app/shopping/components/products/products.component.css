@@ -5,28 +5,31 @@
 }
 
 .z {
-    display: grid;
-    gap: 5vh;
-    grid-template-columns: 1fr 3fr;
+  display: grid;
+  gap: 5vh;
+  grid-template-columns: 1fr 3fr;
 }
 
 .a {
   position: fixed;
   margin-top: 20px;
-  margin-left: 0px;
 }
 
 @media screen and (max-width: 850px) {
-  .row {
+  .z {
+    display: grid;
     grid-template-columns: 1fr;
-}
+  }
 
-.y {
-    margin: 0px 12vw;
-}
+  .y {
+    margin: 0px 2.5vw;
+  }
 
-.a {
-    margin: 0 5vw;
-    position: relative;
+  .x {
+    margin: 0px 2.5vw;
+  }
+
+  .a {
+    position: static;
   }
 }

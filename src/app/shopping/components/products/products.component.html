@@ -1,17 +1,17 @@
 <div class="container">
-    <div class="row z">
-        <div>
-            <product-filter class="a" [category]="category"></product-filter>
-        </div>
-        <div>
-            <div class="row">
-                <ng-container *ngFor="let p of filteredProducts; let i = index">
-                    <div class="col y">
-                        <product-card class="b" [product]="p"></product-card>
-                    </div>
-                    <div *ngIf="(i+1) % 2 === 0" class="w-100"></div>
-                </ng-container>
-            </div>
-        </div>
+  <div class="row z">
+    <div class="x">
+      <product-filter class="a" [category]="category"></product-filter>
     </div>
+    <div>
+      <div class="row">
+        <ng-container *ngFor="let p of filteredProducts; let i = index">
+          <div class="col y">
+            <product-card class="b" [product]="p"></product-card>
+          </div>
+          <div *ngIf="(i + 1) % 2 === 0" class="w-100"></div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
 </div>
