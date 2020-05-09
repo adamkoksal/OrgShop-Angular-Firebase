@@ -8,7 +8,7 @@ import { ShoppingCartService } from "./shopping-cart.service";
 export class OrderService {
   constructor(
     private db: AngularFireDatabase,
-    private shoppingCartService: ShoppingCartService
+    private shoppingCartService: ShoppingCartService,
   ) {}
 
   async placeOrder(order) {
@@ -18,12 +18,14 @@ export class OrderService {
   }
 
   getOrders() {
-    return this.db.list("/orders");
+    return this.db.list("/orders").valueChanges();
   }
 
-  // getOrdersByUser(userId: string) {
-  //   return this.db
-  //     .list("/order", (query) => query.orderByChild("userId").equalTo(userId))
-  //     .valueChanges();
-  // }
+  getOrdersByUser(userId: string) {
+    return this.db
+      .list("/orders", (query) => query.orderByChild("userId").equalTo(userId))
+      .valueChanges();
+  }
+
+  
 }

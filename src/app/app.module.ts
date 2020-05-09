@@ -83,7 +83,6 @@ import { ShoppingCartSummaryComponent } from "./shopping-cart-summary/shopping-c
         component: MyOrdersComponent,
         canActivate: [AuthGuardService],
       },
-
       {
         path: "admin/products/new",
         component: ProductFormComponent,
@@ -117,8 +116,8 @@ import { ShoppingCartSummaryComponent } from "./shopping-cart-summary/shopping-c
     AdminAuthGuardService,
     CategoryService,
     ProductService,
-    ShoppingCartService,
-    OrderService,
+    ShoppingCartService, 
+    OrderService
   ],
   bootstrap: [AppComponent],
 })
